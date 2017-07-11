@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPageBg">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/colorPageBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- 上面的大图-->
+        <LinearLayout
+            android:background="@drawable/ic_nav_bg_drawerlayout"
+            android:id="@+id/ll_header_bg"
+            android:layout_width="match_parent"
+            android:layout_height="346px"
+            android:orientation="vertical"
+            android:gravity="bottom">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#4000"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:padding="32px">
+
+                <ImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="centerCrop" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="32px">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="夕阳无限好"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="17sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        android:background="@drawable/shape_bg_level"
+                        android:text="Lv.10"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="10sp"
+                        android:textStyle="italic|bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_nav_homepage"
+            android:layout_width="match_parent"
+            android:layout_height="96px"
+            android:layout_marginTop="16px"
+            android:background="@drawable/ripple_one_item_bg"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="32px"
+            android:paddingRight="32px">
+
+            <ImageView
+                android:layout_width="40px"
+                android:layout_height="40px"
+                android:src="@drawable/ic_nav_homepage" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32px"
+                android:text="项目主页"
+                android:textColor="@color/colorContent"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
