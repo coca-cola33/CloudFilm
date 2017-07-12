@@ -1,6 +1,7 @@
 package me.jessyan.mvparms.demo.mvp.ui.fragment.gank;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.annotation.NonNull;
@@ -15,7 +16,14 @@ import com.jess.arms.base.BaseFragment;
 import com.jess.arms.base.DefaultAdapter;
 import com.jess.arms.di.component.AppComponent;
 import com.jess.arms.utils.LogUtils;
+import com.jess.arms.utils.PermissionUtil;
 import com.jess.arms.utils.UiUtils;
+import com.tbruyelle.rxpermissions.RxPermissions;
+import com.zhihu.matisse.Matisse;
+import com.zhihu.matisse.MimeType;
+import com.zhihu.matisse.engine.impl.GlideEngine;
+
+import org.xml.sax.ErrorHandler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -145,6 +153,11 @@ public class WelfareFragment extends BaseFragment<WelfarePresenter> implements W
     }
 
     @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    @Override
     public void launchActivity(@NonNull Intent intent) {
         checkNotNull(intent);
         UiUtils.startActivity(intent);
@@ -170,6 +183,8 @@ public class WelfareFragment extends BaseFragment<WelfarePresenter> implements W
             @Override
             public void onItemClick(View view, int viewType, Object data, int position) {
                 UiUtils.SnackbarText("onItemClick");
+
+
 //                LogUtils.debugInfo("-----" + imgList.toString());
 //                LogUtils.debugInfo("----imgList.size():  " + imgList.size());
 //                Bundle bundle=new Bundle();

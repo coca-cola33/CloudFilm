@@ -34,6 +34,7 @@ import com.zhihu.matisse.internal.utils.PhotoMetadataUtils;
 import it.sephiroth.android.library.imagezoom.ImageViewTouch;
 import it.sephiroth.android.library.imagezoom.ImageViewTouchBase;
 
+
 public class PreviewItemFragment extends Fragment {
 
     private static final String ARGS_ITEM = "args_item";

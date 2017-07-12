@@ -1,11 +1,17 @@
 package me.jessyan.mvparms.demo.mvp.presenter;
 
 import android.app.Application;
+import android.content.pm.ActivityInfo;
 
 import com.jess.arms.integration.AppManager;
 import com.jess.arms.di.scope.ActivityScope;
 import com.jess.arms.mvp.BasePresenter;
+import com.jess.arms.utils.PermissionUtil;
 import com.jess.arms.widget.imageloader.ImageLoader;
+import com.tbruyelle.rxpermissions.RxPermissions;
+import com.zhihu.matisse.Matisse;
+import com.zhihu.matisse.MimeType;
+import com.zhihu.matisse.engine.impl.GlideEngine;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,6 +90,23 @@ public class WelfarePresenter extends BasePresenter<WelfareContract.Model, Welfa
                     }
                 });
     }
+
+//    public void requestPermission(){
+//        PermissionUtil.externalStorage(new PermissionUtil.RequestPermission() {
+//            @Override
+//            public void onRequestPermissionSuccess() {
+//                Matisse.from(getActivity())
+//                        .choose(MimeType.ofAll(), false) // 选择 mime 的类型
+//                        .countable(true)
+//                        .maxSelectable(9) // 图片选择的最多数量
+//                        //.gridExpectedSize(getResources().getDimensionPixelSize(R.dimen.grid_expected_size))
+//                        .restrictOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED)
+//                        .thumbnailScale(0.85f) // 缩略图的比例
+//                        .imageEngine(new GlideEngine()) // 使用的图片加载引擎
+//                        .forResult(1); // 设置作为标记的请求码
+//            }
+//        }, new RxPermissions(mRootView),this,mErrorHandler);
+//    }
 
     @Override
     public void onDestroy() {
