@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/ll_search_icon"
+    android:layout_width="match_parent"
+    android:layout_height="20dp">
+
+    <ImageView android:layout_width="20dp" android:layout_height="20dp"
+        android:padding="2dp"
+        android:src="@drawable/search_96" android:scaleType="fitXY"/>
+
+    <!-- imeOption改变软键盘右下角的键，配合1.将singleLine设置为true2.将inputType设置为text -->
+    <EditText
+        android:textSize="14sp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColorHint="@color/search_grey"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionSearch"
+        android:singleLine="true"
+        android:background="@android:color/transparent"
+        android:theme="@style/InternalSearchEditTextTheme"
+        android:id="@+id/et_search"
+        android:textColor="@color/search_grey"
+        android:hint="@android:string/search_go"
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+
+
+</com.zhy.autolayout.AutoLinearLayout>

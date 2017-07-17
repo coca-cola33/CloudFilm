@@ -68,6 +68,7 @@ public class RecommendFragment extends BaseFragment<RecommendPresenter> implemen
     private List<String> mBannerIds;
     private RecommendAdapter mRecommendAdapter;
 
+    private boolean isRefresh;
 
     public static RecommendFragment newInstance() {
         RecommendFragment fragment = new RecommendFragment();
@@ -91,7 +92,6 @@ public class RecommendFragment extends BaseFragment<RecommendPresenter> implemen
 
     @Override
     public void initData() {
-
         initAnimation();
         initXRecyclerView();
         mPresenter.requestContent();
@@ -115,13 +115,30 @@ public class RecommendFragment extends BaseFragment<RecommendPresenter> implemen
         tv_daily_text.setText(getTodayTime().get(2).indexOf("0")==0?getTodayTime().get(2).replace("0",""):getTodayTime().get(2));
 
         xrv_everyday.addHeaderView(headerView);
-        xrv_everyday.setPullRefreshEnabled(false);
-        xrv_everyday.setLoadingMoreEnabled(false);
+        xrv_everyday.setPullRefreshEnabled(true);
+        xrv_everyday.setLoadingMoreEnabled(true);
         xrv_everyday.setLayoutManager(new LinearLayoutManager(getContext()));
         //需加，不然滑动不流畅
         xrv_everyday.setNestedScrollingEnabled(false);
         xrv_everyday.setHasFixedSize(false);
         xrv_everyday.setItemAnimator(new DefaultItemAnimator());
+        //上拉刷新下拉加载
+        xrv_everyday.setLoadingListener(new XRecyclerView.LoadingListener() {
+            @Override
+            public void onRefresh() {
+                mRecommendAdapter.clear();
+                isRefresh=true;
+                mPresenter.requestContent();
+            }
+
+            @Override
+            public void onLoadMore() {
+
+                isRefresh=false;
+
+            }
+        });
+
 
     }
 
@@ -243,7 +260,7 @@ public class RecommendFragment extends BaseFragment<RecommendPresenter> implemen
         if(mRecommendAdapter==null){
             mRecommendAdapter=new RecommendAdapter(newsTimeLine.getStories());
         }else{
-            mRecommendAdapter.clear();
+            mRecommendAdapter.addAll(newsTimeLine.getStories());
         }
         xrv_everyday.setAdapter(mRecommendAdapter);
         mRecommendAdapter.notifyDataSetChanged();

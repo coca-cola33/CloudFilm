@@ -16,16 +16,18 @@ import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.bigkoo.pickerview.R;
-import com.bigkoo.pickerview.adapter.WheelAdapter;
-import com.bigkoo.pickerview.listener.OnItemSelectedListener;
-import com.bigkoo.pickerview.model.IPickerViewData;
+
 
 import java.util.Locale;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
+
+import kg.jl.pickerview.R;
+import kg.jl.pickerview.adapter.WheelAdapter;
+import kg.jl.pickerview.listener.OnItemSelectedListener;
+import kg.jl.pickerview.model.IPickerViewData;
 
 /**
  * 3d滚轮控件

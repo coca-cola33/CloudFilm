@@ -70,7 +70,9 @@ public class SplashActivity extends BaseActivity<SplashPresenter> implements Spl
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                iv_default_pic.setVisibility(View.GONE);
+                if(iv_default_pic!=null) {
+                    iv_default_pic.setVisibility(View.GONE);
+                }
             }
         },3500);
         new Handler().postDelayed(new Runnable() {

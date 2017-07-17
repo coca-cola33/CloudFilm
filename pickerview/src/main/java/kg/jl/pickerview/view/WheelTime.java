@@ -2,10 +2,10 @@ package kg.jl.pickerview.view;
 
 import android.view.View;
 
-import com.bigkoo.pickerview.R;
-import com.bigkoo.pickerview.adapter.NumericWheelAdapter;
-import com.bigkoo.pickerview.lib.WheelView;
-import com.bigkoo.pickerview.listener.OnItemSelectedListener;
+import kg.jl.pickerview.R;
+import kg.jl.pickerview.adapter.NumericWheelAdapter;
+import kg.jl.pickerview.lib.WheelView;
+import kg.jl.pickerview.listener.OnItemSelectedListener;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

@@ -16,4 +16,10 @@
         <item name="android:activityCloseExitAnimation">@anim/translate_center_to_right</item>
     </style>
 
+    <style name="InternalSearchEditTextTheme">
+        <item name="colorControlNormal">@color/search_grey</item>
+        <item name="colorControlActivated">@color/search_grey</item>
+        <item name="colorControlHighlight">@color/search_grey</item>
+    </style>
+
 </resources>

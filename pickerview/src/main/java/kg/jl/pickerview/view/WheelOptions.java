@@ -3,10 +3,10 @@ package kg.jl.pickerview.view;
 import android.graphics.Typeface;
 import android.view.View;
 
-import com.bigkoo.pickerview.R;
-import com.bigkoo.pickerview.adapter.ArrayWheelAdapter;
-import com.bigkoo.pickerview.lib.WheelView;
-import com.bigkoo.pickerview.listener.OnItemSelectedListener;
+import kg.jl.pickerview.R;
+import kg.jl.pickerview.adapter.ArrayWheelAdapter;
+import kg.jl.pickerview.lib.WheelView;
+import kg.jl.pickerview.listener.OnItemSelectedListener;
 
 import java.util.List;
 

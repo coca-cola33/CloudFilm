@@ -37,7 +37,7 @@ public class GankFragment extends BaseFragment<GankPresenter> implements GankCon
     @BindView(R.id.vp_gank)
     ViewPager vp_gank;
 
-    private String[] mTitleList=new String[]{"每日推荐","福利","干货订制","大安卓"};
+    private String[] mTitleList=new String[]{"知乎","福利","电影","图书"};
     private ArrayList<BaseFragment> mFragments=new ArrayList<>();
 
     public static GankFragment newInstance() {

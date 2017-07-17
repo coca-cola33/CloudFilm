@@ -2,7 +2,7 @@ package kg.jl.pickerview.utils;
 
 import android.view.Gravity;
 
-import com.bigkoo.pickerview.R;
+import kg.jl.pickerview.R;
 
 /**
  * Created by Sai on 15/8/9.

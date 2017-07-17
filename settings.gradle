@@ -1,1 +1,1 @@
-include ':app', ':arms', ':xrecyclerview', ':matisse', ':pickerview'
+include ':app', ':arms', ':xrecyclerview', ':matisse', ':pickerview', ':common'

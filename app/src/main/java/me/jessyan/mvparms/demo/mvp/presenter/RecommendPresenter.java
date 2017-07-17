@@ -84,6 +84,10 @@ public class RecommendPresenter extends BasePresenter<RecommendContract.Model, R
 
     }
 
+    public void getBeforeNews(){
+
+    }
+
 
 
     @Override

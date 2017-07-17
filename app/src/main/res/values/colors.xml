@@ -71,4 +71,9 @@
     <!--cardView妹子图片下方字体 -->
     <color name="text_color">#424242</color>
 
+    <!--searchBar-->
+    <color name="search_blue">#007aff</color>
+    <color name="search_grey">#8e8e93</color>
+    <color name="search_inactive">#e4e4e4</color>
+
 </resources>

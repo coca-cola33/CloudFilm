@@ -15,15 +15,9 @@ import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.jess.arms.base.BaseFragment;
 import com.jess.arms.base.DefaultAdapter;
 import com.jess.arms.di.component.AppComponent;
-import com.jess.arms.utils.LogUtils;
-import com.jess.arms.utils.PermissionUtil;
-import com.jess.arms.utils.UiUtils;
-import com.tbruyelle.rxpermissions.RxPermissions;
-import com.zhihu.matisse.Matisse;
-import com.zhihu.matisse.MimeType;
-import com.zhihu.matisse.engine.impl.GlideEngine;
 
-import org.xml.sax.ErrorHandler;
+import com.jess.arms.utils.UiUtils;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -78,7 +72,6 @@ public class WelfareFragment extends BaseFragment<WelfarePresenter> implements W
 
     @Override
     public void initData() {
-
         initXRecyclerView();
         mPresenter.getContent(isRefresh,page);
 
